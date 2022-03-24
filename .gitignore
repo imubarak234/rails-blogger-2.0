@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 node_modules/
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+=======
+node_modules/
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+>>>>>>> a6ebee09a718dd8d98414257e94e2a73c06946f2

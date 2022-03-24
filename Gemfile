@@ -33,6 +33,8 @@ gem 'jbuilder'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+gem 'rails-controller-testing'
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -51,6 +53,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+
+  gem 'rspec-rails', '~> 5.0.0'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
