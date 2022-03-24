@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsBlogger</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <div>
+    <h2>USER NAME</h2>
+    <p>Number of posts: x</p>
+  </div>
+  
+  <div>
+    <h3>Post #1</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
+    <p>Comments x, Likes: y</p>
+  </div>
+  <div>
+    <p>Username: Comment 1</p>
+    <p>Username: Comment 2</p>
+    <p>Username: Comment 3</p>
+    <p>Username: Comment 4</p>
+    <p>Username: Comment 5</p>
+  </div>
+  <div>
+    <h3>Post #1</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
+  </div>
+  <div>
+    <h3>Post #2</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
+    <p>Comments x, Likes: y</p>
+    <div>
+      <p>Username: Comment 1</p>
+      <p>Username: Comment 2</p>
+      <p>Username: Comment 3</p>
+      <p>Username: Comment 4</p>
+      <p>Username: Comment 5</p>
+    </div>
+  </div>
+  <button>Pagination</button>
+  </body>
+</html>
