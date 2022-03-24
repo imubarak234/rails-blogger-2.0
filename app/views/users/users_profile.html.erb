@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsBlogger</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <div>
+    <h2>USER NAME</h2>
+    <p>Number of posts: x</p>
+  </div>
+  
+  <div>
+    <h3>Bio</h3>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Placeat autem illum sequi enim odio accusantium nesciunt eos vero, 
+       quia facilis illo ullam repellendus eaque rerum fuga nam aliquam 
+       tempora quam quo ad nulla ex iste neque. Dolorem iste adipisci deserunt 
+       aperiam fugiat quasi minima accusantium minus? Facere iste ut dignissimos.</p>
+  </div>
+
+  <div>
+    <h3>Post #1</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
+    <p>Comments x, Likes: y</p>
+  </div>
+  <div>
+    <h3>Post #2</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
+    <p>Comments x, Likes: y</p>
+  </div>
+  <div>
+    <h3>Post #3</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
+    <p>Comments x, Likes: y</p>
+  </div>
+  <div>
+    <h3>Post #4</h3>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
+    <p>Comments x, Likes: y</p>
+  </div>
+
+  <button>See all posts</button>
+  </body>
+</html>
