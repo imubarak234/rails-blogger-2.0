@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   def index
-    render 'all_posts'
+    render 'index'
   end
 
   def show
-    render 'posts_profile'
+    render 'show'
   end
 end

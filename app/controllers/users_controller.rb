@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   def index
-    render 'all_users'
+    render 'index'
   end
 
   def show
-    render 'users_profile'
+    render 'show'
   end
 end
