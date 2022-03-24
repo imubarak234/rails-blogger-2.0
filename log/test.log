@@ -1,0 +1,343 @@
+  [1m[35m (5474.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:17:18 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 417.6ms | Allocations: 94451)
+  Rendered layout layouts/application.html.erb (Duration: 419.4ms | Allocations: 96300)
+Completed 200 OK in 431ms (Views: 426.6ms | ActiveRecord: 0.0ms | Allocations: 102189)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:17:19 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1546)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3048)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 3317)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5461.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:19:42 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 63.3ms | Allocations: 37969)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 39810)
+Completed 200 OK in 75ms (Views: 71.2ms | ActiveRecord: 0.0ms | Allocations: 45699)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:19:42 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1546)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3048)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 3317)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5492.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:21:45 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 164.6ms | Allocations: 37847)
+  Rendered layout layouts/application.html.erb (Duration: 169.7ms | Allocations: 39698)
+Completed 200 OK in 199ms (Views: 186.9ms | ActiveRecord: 0.0ms | Allocations: 45586)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:21:45 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3072)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5494.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:31:02 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 171.5ms | Allocations: 37733)
+  Rendered layout layouts/application.html.erb (Duration: 176.5ms | Allocations: 39584)
+Completed 200 OK in 205ms (Views: 193.5ms | ActiveRecord: 0.0ms | Allocations: 45472)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:31:02 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3072)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3341)
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:31:02 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1478)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2987)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 3195)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5465.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:38:22 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 174.3ms | Allocations: 37946)
+  Rendered layout layouts/application.html.erb (Duration: 178.8ms | Allocations: 39797)
+Completed 200 OK in 206ms (Views: 194.8ms | ActiveRecord: 0.0ms | Allocations: 45685)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:38:23 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3072)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5553.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:41:27 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 180.9ms | Allocations: 37880)
+  Rendered layout layouts/application.html.erb (Duration: 188.2ms | Allocations: 39731)
+Completed 200 OK in 215ms (Views: 203.9ms | ActiveRecord: 0.0ms | Allocations: 45619)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:41:28 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3072)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:41:28 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3072)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5481.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:48:05 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 167.3ms | Allocations: 37843)
+  Rendered layout layouts/application.html.erb (Duration: 172.4ms | Allocations: 39694)
+Completed 200 OK in 201ms (Views: 189.2ms | ActiveRecord: 0.0ms | Allocations: 45582)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:48:05 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3072)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:48:05 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3072)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users:id" for 127.0.0.1 at 2022-03-24 15:48:05 +0100
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users:id" for 127.0.0.1 at 2022-03-24 15:48:05 +0100
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users:id" for 127.0.0.1 at 2022-03-24 15:48:05 +0100
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5460.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:49:19 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 163.8ms | Allocations: 37818)
+  Rendered layout layouts/application.html.erb (Duration: 168.6ms | Allocations: 39669)
+Completed 200 OK in 195ms (Views: 184.1ms | ActiveRecord: 0.0ms | Allocations: 45557)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:49:19 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3072)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 15:49:19 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3072)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id" for 127.0.0.1 at 2022-03-24 15:49:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1982)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3495)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 3840)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id" for 127.0.0.1 at 2022-03-24 15:49:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3072)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id" for 127.0.0.1 at 2022-03-24 15:49:19 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3072)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (5380.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_blogger_test"[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id/posts" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 148.3ms | Allocations: 37875)
+  Rendered layout layouts/application.html.erb (Duration: 152.7ms | Allocations: 39726)
+Completed 200 OK in 183ms (Views: 171.7ms | ActiveRecord: 0.0ms | Allocations: 45614)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id/posts" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3072)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id/posts" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3072)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id/posts/:id" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>":id", "id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1946)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3459)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3804)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id/posts/:id" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>":id", "id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3072)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id/posts/:id" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>":id", "id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3072)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2034)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3552)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 4561)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 3083)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 3352)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3072)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1985)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3498)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 3843)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3072)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+Started GET "/users/:id" for 127.0.0.1 at 2022-03-24 16:53:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>":id"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1559)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3072)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 3341)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
