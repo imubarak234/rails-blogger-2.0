@@ -10,27 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_25_104518) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_25_112703) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comment", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.bigint "authorid", null: false
     t.bigint "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "text"
-    t.index ["post_id", "user_id"], name: "index_comment_on_post_id_and_user_id"
-    t.index ["user_id", "post_id"], name: "index_comment_on_user_id_and_post_id"
+    t.index ["authorid", "post_id"], name: "index_comment_on_authorid_and_post_id"
+    t.index ["post_id", "authorid"], name: "index_comment_on_post_id_and_authorid"
   end
 
   create_table "like", id: false, force: :cascade do |t|
     t.bigint "post_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "authorid", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id", "user_id"], name: "index_like_on_post_id_and_user_id"
-    t.index ["user_id", "post_id"], name: "index_like_on_user_id_and_post_id"
+    t.index ["authorid", "post_id"], name: "index_like_on_authorid_and_post_id"
+    t.index ["post_id", "authorid"], name: "index_like_on_post_id_and_authorid"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -40,9 +40,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_25_104518) do
     t.datetime "updated_at", null: false
     t.integer "comments_counter"
     t.integer "likes_counter"
+    t.bigint "authorid", null: false
+    t.index ["authorid"], name: "index_posts_on_authorid"
   end
 
-  create_table "user", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "photo"
     t.text "Bio"
@@ -51,4 +53,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_25_104518) do
     t.integer "posts_counter"
   end
 
+  add_foreign_key "posts", "users", column: "authorid"
 end
