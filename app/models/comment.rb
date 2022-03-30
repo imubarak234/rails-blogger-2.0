@@ -2,11 +2,15 @@ class Comment < ApplicationRecord
   belongs_to :author, class_name: 'User'
   belongs_to :post
 
-  def self.update_post_comments_count(post)
-    if post.comments_counter.nil?
+  after_save :update_post_comments_count
+
+  private
+
+  def update_post_comments_count
+    if post.comments_counter == nil
       post.comments_counter = 1
     else
-      post.comments_counter += 1
+      post.increment!(:comments_counter)
     end
   end
 end

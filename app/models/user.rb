@@ -7,5 +7,5 @@ class User < ApplicationRecord
     Post.where(author: user).limit(3).order(created_at: :desc)
   end
 
-  attr_accessor :bio, :name, :photo, :posts_counter
+  attr_accessor :posts_counter
 end
