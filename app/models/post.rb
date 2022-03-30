@@ -14,12 +14,10 @@ class Post < ApplicationRecord
   private
 
   def update_user_post_count
-    if author.posts_counter == nil
+    if author.posts_counter.nil?
       author.posts_counter = 1
     else
       author.increment!(:posts_counter)
     end
   end
-
-  
 end

@@ -7,11 +7,10 @@ class Like < ApplicationRecord
   private
 
   def update_post_likes_count
-    if post.likes_counter == nil
+    if post.likes_counter.nil?
       post.likes_counter = 1
     else
       post.increment!(:likes_counter)
     end
   end
 end
-
