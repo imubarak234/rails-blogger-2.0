@@ -5,8 +5,8 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id'
 
   def self.recent(user)
-    Post.where(author: user).limit(3)
+    Post.where(author: user).limit(3).order(created_at: :desc)
   end
 
-  attr_accessor :Bio, :name, :photo
+  attr_accessor :Bio, :name, :photo, :posts_counter
 end
