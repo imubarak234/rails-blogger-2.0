@@ -1,4 +1,3 @@
-
 class User < ApplicationRecord
   has_many :posts, foreign_key: 'author_id'
   has_many :likes, foreign_key: 'author_id'
@@ -8,5 +7,5 @@ class User < ApplicationRecord
     Post.where(author: user).limit(3).order(created_at: :desc)
   end
 
-  attr_accessor :Bio, :name, :photo, :posts_counter
+  attr_accessor :bio, :name, :photo, :posts_counter
 end
