@@ -11,8 +11,8 @@ class User < ApplicationRecord
     Post.where(author_id: user).order(created_at: :desc)
   end
 
-  def info(id)
-    User.find_by(id:)
+  def info(ids)
+    User.find_by(id: ids)
   end
 
   def print

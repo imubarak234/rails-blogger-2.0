@@ -19,8 +19,8 @@ class Post < ApplicationRecord
     Post.all.limit(5)
   end
 
-  def info(id)
-    Post.find_by(id:)
+  def info(ids)
+    Post.find_by(id: ids)
   end
 
   private
