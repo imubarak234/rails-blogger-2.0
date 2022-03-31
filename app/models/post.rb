@@ -7,12 +7,20 @@ class Post < ApplicationRecord
 
   after_save :update_user_post_count
 
-  def self.recent_comments(post)
-    Comment.where(post:).limit(5).order(created_at: :desc)
+  def recent_comments(post)
+    Comment.where(post_id: post).limit(5).order(created_at: :desc)
+  end
+
+  def recent_comments_all(post)
+    Comment.where(post_id: post).order(created_at: :desc)
   end
 
   def print
     Post.all.limit(5)
+  end
+
+  def info(id)
+    Post.find_by(id: id)
   end
 
   private

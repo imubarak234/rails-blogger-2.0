@@ -2677,3 +2677,850 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 4288)
 
 
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:01:52 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 18729)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 18823)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 4.7ms | Allocations: 27758)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    16:     <div class='section1'>
+    17:       <div class='profile'></div>
+    18:       <div class='user_display'>
+    19:         <h2><%=@user_show.name%></h2>
+    20:         <p>Number of posts: <%= @user_show.posts_counter%></p>
+    21:       </div>
+    22:   </div>
+  
+app/views/posts/index.html.erb:19
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:04:32 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 5.4ms | Allocations: 12596)
+
+
+  
+NoMethodError (undefined method `info' for User:Class):
+  
+app/controllers/posts_controller.rb:4:in `index'
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:05:25 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 18736)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 18830)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 5.4ms | Allocations: 31387)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    16:     <div class='section1'>
+    17:       <div class='profile'></div>
+    18:       <div class='user_display'>
+    19:         <h2><%=@users.name%></h2>
+    20:         <p>Number of posts: <%= @users.posts_counter%></p>
+    21:       </div>
+    22:   </div>
+  
+app/views/posts/index.html.erb:19
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:06:14 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 18083)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 18177)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 5.9ms | Allocations: 30387)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    16:     <div class='section1'>
+    17:       <div class='profile'></div>
+    18:       <div class='user_display'>
+    19:         <h2><%=@users.name%></h2>
+    20:         <p>Number of posts: <%= @users.posts_counter%></p>
+    21:       </div>
+    22:   </div>
+  
+app/views/posts/index.html.erb:19
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:08:41 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 18083)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 18177)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 5.7ms | Allocations: 30385)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    16:     <div class='section1'>
+    17:       <div class='profile'></div>
+    18:       <div class='user_display'>
+    19:         <h2><%=@users.name%></h2>
+    20:         <p>Number of posts: <%= @users.posts_counter%></p>
+    21:       </div>
+    22:   </div>
+  
+app/views/posts/index.html.erb:19
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:09:36 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 18083)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 18177)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 6.2ms | Allocations: 30387)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    16:     <div class='section1'>
+    17:       <div class='profile'></div>
+    18:       <div class='user_display'>
+    19:         <h2><%=@users.name%></h2>
+    20:         <p>Number of posts: <%= @users.posts_counter%></p>
+    21:       </div>
+    22:   </div>
+  
+app/views/posts/index.html.erb:19
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:10:34 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.1ms | Allocations: 16791)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 18748)
+Completed 200 OK in 48ms (Views: 25.4ms | ActiveRecord: 8.0ms | Allocations: 31347)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:11:48 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 16804)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 18415)
+Completed 200 OK in 49ms (Views: 23.3ms | ActiveRecord: 6.2ms | Allocations: 30954)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:12:23 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 22.1ms | Allocations: 16673)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 18284)
+Completed 200 OK in 43ms (Views: 24.1ms | ActiveRecord: 6.2ms | Allocations: 30810)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:12:36 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3075)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4677)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.9ms | Allocations: 5560)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:14:02 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 16681)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 18298)
+Completed 200 OK in 42ms (Views: 22.5ms | ActiveRecord: 6.6ms | Allocations: 30821)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:14:35 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 16773)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 18384)
+Completed 200 OK in 51ms (Views: 22.9ms | ActiveRecord: 6.1ms | Allocations: 30985)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:14:57 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 16682)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 18293)
+Completed 200 OK in 41ms (Views: 22.3ms | ActiveRecord: 5.7ms | Allocations: 30814)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 22:15:16 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4119)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 6049)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 7811)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:13:29 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 5 repos/rails-blogger-2.0/app/controllers/posts_controller.rb:12: syntax error, unexpected ':', expecting `end'
+  helper_method: comments
+               ^
+):
+  
+app/controllers/posts_controller.rb:12: syntax error, unexpected ':', expecting `end'
+app/controllers/posts_controller.rb:12: syntax error, unexpected ':', expecting `end'
+app/controllers/posts_controller.rb:12: syntax error, unexpected ':', expecting `end'
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:24:30 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 5 repos/rails-blogger-2.0/app/controllers/posts_controller.rb:19: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/posts_controller.rb:19: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/posts_controller.rb:19: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/posts_controller.rb:19: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:24:54 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 22317)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 22411)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 8.1ms | Allocations: 37051)
+
+
+  
+ActionView::Template::Error (undefined method `recent_comments' for Post:Class):
+    30:     </div>
+    31:   <% end %>
+    32: 
+    33:   <p><%=comments(1)%></p>
+    34:   
+    35:   
+    36:   <button class="btn">Pagination</button>
+  
+app/controllers/posts_controller.rb:9:in `comments'
+app/controllers/posts_controller.rb:14:in `comments'
+app/views/posts/index.html.erb:33
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:25:47 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 32.0ms | Allocations: 27912)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 28015)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 9.0ms | Allocations: 40622)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_id' for #<Post id: nil, author_id: nil, title: nil, text: nil, created_at: nil, updated_at: nil, comments_counter: nil, likes_counter: nil>):
+    30:     </div>
+    31:   <% end %>
+    32: 
+    33:   <p><%=comments(1)%></p>
+    34:   
+    35:   
+    36:   <button class="btn">Pagination</button>
+  
+app/models/post.rb:11:in `recent_comments'
+app/controllers/posts_controller.rb:9:in `comments'
+app/controllers/posts_controller.rb:14:in `comments'
+app/views/posts/index.html.erb:33
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:26:37 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 26.3ms | Allocations: 19842)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 21884)
+Completed 200 OK in 53ms (Views: 29.1ms | ActiveRecord: 7.3ms | Allocations: 34548)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:33:14 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 9414)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 9508)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 5.9ms | Allocations: 13726)
+
+
+  
+ActionView::Template::Error (undefined method `id' for #<ActiveRecord::Relation [#<Post id: 3, author_id: 2, title: "feels", text: "This is my first post", created_at: "2022-03-29 20:44:00.034562000 +0000", updated_at: "2022-03-29 20:44:00.034562000 +0000", comments_counter: nil, likes_counter: nil>, #<Post id: 4, author_id: 2, title: "Hello", text: "This is my first post", created_at: "2022-03-29 20:45:02.628209000 +0000", updated_at: "2022-03-29 20:45:02.628209000 +0000", comments_counter: nil, likes_counter: nil>, #<Post id: 1, author_id: 1, title: "what next", text: "first of updates", created_at: "2022-03-29 20:19:28.538694000 +0000", updated_at: "2022-03-29 21:15:55.075837000 +0000", comments_counter: nil, likes_counter: nil>, #<Post id: 5, author_id: 3, title: "feels", text: "This is my first post", created_at: "2022-03-29 21:24:02.413340000 +0000", updated_at: "2022-03-29 21:24:02.413340000 +0000", comments_counter: nil, likes_counter: nil>, #<Post id: 6, author_id: 4, title: "Hellos", text: "This is my first post and more to come", created_at: "2022-03-29 22:47:23.633347000 +0000", updated_at: "2022-03-29 22:47:23.633347000 +0000", comments_counter: nil, likes_counter: nil>]>
+Did you mean?  ids):
+    30:     </div>
+    31:     
+    32:     <div class="borders">
+    33:       <% comments(@posts.id).each do |n| %>
+    34:         <div class="section1">
+    35:           <h4><%=@users.name%>:</h4>
+    36:           <p><%=n.text%></p>
+  
+app/views/posts/index.html.erb:33
+app/views/posts/index.html.erb:24:in `each_with_index'
+app/views/posts/index.html.erb:24
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:33:51 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  [1m[36mComment Load (13.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.8ms | Allocations: 10452)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 12382)
+Completed 200 OK in 40ms (Views: 20.6ms | ActiveRecord: 17.2ms | Allocations: 14119)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:35:06 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 7880)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 9810)
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 1.9ms | Allocations: 11541)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:38:07 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  Rendered posts/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 7843)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 9773)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 1.9ms | Allocations: 11504)
+
+
+Started GET "/users/4/users/4/posts/1" for 127.0.0.1 at 2022-03-31 23:38:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/4/users/4/posts/1"):
+  
+Started GET "/users/4/users/4/posts/5" for 127.0.0.1 at 2022-03-31 23:38:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/4/users/4/posts/5"):
+  
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:38:47 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  Rendered posts/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 7813)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 9743)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 2.3ms | Allocations: 11468)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2022-03-31 23:38:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/posts/1"):
+  
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-03-31 23:38:57 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 7836)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 9766)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 2.0ms | Allocations: 11495)
+
+
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-03-31 23:38:58 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2805)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4407)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4736)
+
+
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-03-31 23:45:04 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 22.0ms | Allocations: 15892)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 17503)
+Completed 200 OK in 25ms (Views: 24.4ms | Allocations: 18471)
+
+
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-03-31 23:55:43 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 30.2ms | Allocations: 18714)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 18808)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 6.2ms | Allocations: 29057)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    13:   <body>
+    14:     <%= yield %>
+    15:     <div class="borders">
+    16:       <h3>Post #<%=@post_show.id%> by <%=@users.name%> </h3>
+    17:       <h3>Title: <%=@post_show.title%></h3>
+    18:       <p><%=n.text%></p>
+    19:       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
+  
+app/views/posts/show.html.erb:16
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-03-31 23:57:56 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 21.5ms | Allocations: 18052)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 18146)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 7.1ms | Allocations: 25910)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    13:   <body>
+    14:     <%= yield %>
+    15:     <div class="borders">
+    16:       <h3>Post #<%=@post_show.id%> by <%=@users.name%> </h3>
+    17:       <h3>Title: <%=@post_show.title%></h3>
+    18:       <p><%=n.text%></p>
+    19:       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
+  
+app/views/posts/show.html.erb:16
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-03-31 23:58:28 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 19.2ms | Allocations: 18049)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 18143)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.3ms | Allocations: 25888)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    13:   <body>
+    14:     <%= yield %>
+    15:     <div class="borders">
+    16:       <h3>Post #<%=@post_show.id%> by <%=@users.name%> </h3>
+    17:       <h3>Title: <%=@post_show.title%></h3>
+    18:       <p><%=n.text%></p>
+    19:       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
+  
+app/views/posts/show.html.erb:16
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-04-01 00:00:00 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 22.0ms | Allocations: 21648)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 21742)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 6.9ms | Allocations: 35803)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `n' for #<ActionView::Base:0x000000000c1cc8>):
+    15:     <div class="borders">
+    16:       <h3>Post #<%=@post_show.id%> by <%=@user_show.name%> </h3>
+    17:       <h3>Title: <%=@post_show.title%></h3>
+    18:       <p><%=n.text%></p>
+    19:       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
+    20:     </div>
+    21:     
+  
+app/views/posts/show.html.erb:18
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-04-01 00:00:22 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 21.0ms | Allocations: 21645)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 21739)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 5.9ms | Allocations: 35786)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `n' for #<ActionView::Base:0x000000000c6200>):
+    16:       <h3>Post #<%=@post_show.id%> by <%=@user_show.name%> </h3>
+    17:       <h3>Title: <%=@post_show.title%></h3>
+    18:       <p><%=@post_show.text%></p>
+    19:       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
+    20:     </div>
+    21:     
+    22:     <div class="borders">
+  
+app/views/posts/show.html.erb:19
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-04-01 00:00:54 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 8339)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 8433)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms | Allocations: 10686)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_show' for #<ActionView::Base:0x000000000c6548>
+Did you mean?  @post_show):
+    16:       <h3>Post #<%=@post_show.id%> by <%=@user_show.name%> </h3>
+    17:       <h3>Title: <%=@post_show.title%></h3>
+    18:       <p><%=@post_show.text%></p>
+    19:       <p>Comments: <%=@post_show.comments_counter%>, Likes: <%=post_show.likes_counter%></p>
+    20:     </div>
+    21:     
+    22:     <div class="borders">
+  
+app/views/posts/show.html.erb:19
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-04-01 00:01:09 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 1]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 28.5ms | Allocations: 20485)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 22516)
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 2.7ms | Allocations: 24801)
+
+
+Started GET "/users/4/posts/5" for 127.0.0.1 at 2022-04-01 00:01:15 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 5]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3126)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4729)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 1.0ms | Allocations: 6120)
+
+
+Started GET "/users/4/posts/3" for 127.0.0.1 at 2022-04-01 00:01:24 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 6554)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6642)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.0ms | Allocations: 7947)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    22:     <div class="borders">
+    23:       <% comments_all(@post_show.id).each do |n| %>
+    24:         <div class="section1">
+    25:           <h4><%=@users.name%>:</h4>
+    26:           <h4><%=n.text%></h4>
+    27:         </div>
+    28:       <% end %>
+  
+app/views/posts/show.html.erb:25
+app/views/posts/show.html.erb:23
+Started GET "/users/4/posts/3" for 127.0.0.1 at 2022-04-01 00:01:50 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 6483)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6577)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms | Allocations: 8731)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    22:     <div class="borders">
+    23:       <% comments_all(@post_show.id).each do |n| %>
+    24:         <div class="section1">
+    25:           <h4><%=@users_show.name%>:</h4>
+    26:           <h4><%=n.text%></h4>
+    27:         </div>
+    28:       <% end %>
+  
+app/views/posts/show.html.erb:25
+app/views/posts/show.html.erb:23
+Started GET "/users/4/posts/3" for 127.0.0.1 at 2022-04-01 00:02:09 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4272)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6202)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 1.2ms | Allocations: 8422)
+
+
+Started GET "/users/4/posts/4" for 127.0.0.1 at 2022-04-01 00:02:21 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 4]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 22.2ms | Allocations: 3082)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 4684)
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 1.0ms | Allocations: 6044)
+
+
+Started GET "/users/4/posts/1" for 127.0.0.1 at 2022-04-01 00:02:23 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 1]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3097)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4699)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 6024)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-04-01 00:02:39 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4075)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5686)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 6801)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2022-04-01 00:02:42 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 4], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:29:in `each_with_index'
+  Rendered users/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3815)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5417)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.5ms | Allocations: 6468)
+
+
+Started GET "/users/4/posts" for 127.0.0.1 at 2022-04-01 00:02:48 +0100
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:24:in `each_with_index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 3], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 4], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 1], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 5], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC LIMIT $2[0m  [["post_id", 6], ["LIMIT", 5]]
+  ↳ app/views/posts/index.html.erb:33
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 7361)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 8963)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 1.4ms | Allocations: 9856)
+
+
+Started GET "/users/4/posts/3" for 127.0.0.1 at 2022-04-01 00:02:54 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"user_id"=>"4", "id"=>"3"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:23:in `info'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15:in `info'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1 ORDER BY "comments"."created_at" DESC[0m  [["post_id", 3]]
+  ↳ app/views/posts/show.html.erb:23
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3166)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4768)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 6096)
+
+

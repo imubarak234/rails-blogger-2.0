@@ -13,42 +13,34 @@
 
   <body>
     <%= yield %>
-    <div>
-    <h2>USER NAME</h2>
-    <p>Number of posts: x</p>
+    <div class='section1'>
+      <div class='profile'></div>
+      <div class='user_display'>
+        <h2><%=@users.name%></h2>
+        <p>Number of posts: <%= @users.posts_counter%></p>
+      </div>
   </div>
-  
-  <div>
-    <h3>Post #1</h3>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
-    <p>Comments x, Likes: y</p>
-  </div>
-  <div>
-    <p>Username: Comment 1</p>
-    <p>Username: Comment 2</p>
-    <p>Username: Comment 3</p>
-    <p>Username: Comment 4</p>
-    <p>Username: Comment 5</p>
-  </div>
-  <div>
-    <h3>Post #1</h3>
-
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
-  </div>
-  <div>
-    <h3>Post #2</h3>
-
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
-    <p>Comments x, Likes: y</p>
-    <div>
-      <p>Username: Comment 1</p>
-      <p>Username: Comment 2</p>
-      <p>Username: Comment 3</p>
-      <p>Username: Comment 4</p>
-      <p>Username: Comment 5</p>
+  <% @posts.each_with_index do |n, idx| %>
+    <div class="borders" onclick="location.href='posts/<%=n.id%>'">
+      <h3>Post #<%=idx + 1%></h3>
+      <h3>Title <%=n.title%></h3>
+      <p><%=n.text%></p>
+      <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
     </div>
-  </div>
-  <button>Pagination</button>
+    
+    <div class="borders">
+      <% comments(n.id).each do |n| %>
+        <div class="section1">
+          <h4><%=@users.name%>:</h4>
+          <h4><%=n.text%></h4>
+        </div>
+      <% end %>
+    </div>
+  
+  <% end %>
+  
+  
+  <button class="btn">Pagination</button>
   </body>
 </html>

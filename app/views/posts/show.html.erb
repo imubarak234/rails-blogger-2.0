@@ -12,28 +12,21 @@
 
   <body>
     <%= yield %>
-    <div>
-    <h3>Post #1 by username</h3>
-    <p>Comments x, Likes: y</p>
-
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa non, suscipit eveniet ex iste placeat.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur magni quam debitis! Illo nesciunt 
-      cupiditate illum quasi nisi distinctio alias veritatis mollitia est iusto sed deserunt 
-      ipsa dolorem labore cumque, quia aliquam ducimus neque similique? Quas odit ut ullam 
-      architecto voluptates, odio sed, nobis pariatur, blanditiis expedita repellendus? Officiis, magni!</p>
+    <div class="borders">
+      <h3>Post #<%=@post_show.id%> by <%=@user_show.name%> </h3>
+      <h3>Title: <%=@post_show.title%></h3>
+      <p><%=@post_show.text%></p>
+      <p>Comments: <%=@post_show.comments_counter%>, Likes: <%=@post_show.likes_counter%></p>
+    </div>
     
-  </div>
-  <div>
-    <p>Username: Comment 1</p>
-    <p>Username: Comment 2</p>
-    <p>Username: Comment 3</p>
-    <p>Username: Comment 4</p>
-    <p>Username: Comment 5</p>
-    <p>Username: Comment 6</p>
-    <p>Username: Comment 7</p>
-    <p>Username: Comment 8</p>
-    <p>Username: Comment 9</p>
-    <p>Username: Comment 10</p>
-  </div>
+    <div class="borders">
+      <% comments_all(@post_show.id).each do |n| %>
+        <div class="section1">
+          <h4><%=@user_show.name%>:</h4>
+          <h4><%=n.text%></h4>
+        </div>
+      <% end %>
+    </div>
+
   </body>
 </html>
