@@ -14,10 +14,13 @@
     <%= yield %>
     <h1>List of all</h1>
 
-    <% @user.each_with_index do |n, idx| %>
-      <div>
-        <h2><%= n.name %></h2>
-        <p>Number of posts: <%= n.posts_counter%></p>
+    <% @user.each do |n| %>
+      <div class='section1'>
+        <div class='profile'></div>
+        <div class='user_display' onclick="location.href='users/<%=n.id%>'">
+          <h2><%= n.name %></h2>
+          <p>Number of posts: <%= n.posts_counter%></p>
+        </div>
       </div>
     <% end %>
   

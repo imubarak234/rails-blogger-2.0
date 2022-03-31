@@ -4,16 +4,11 @@ class UsersController < ApplicationController
     #render 'index'
     @user = User.new
     @user = @user.print
-    puts @user
-  end
-
-  def lists
-    
   end
 
   def show
-    render 'show'
     puts "This is aimed ant standing out in the console #{params[:id]}"
-    
+    @user_show = User.new.info(params[:id]) 
+    @user_recent = User.new.recent(params[:id])
   end
 end

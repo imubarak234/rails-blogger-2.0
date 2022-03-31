@@ -11,6 +11,10 @@ class Post < ApplicationRecord
     Comment.where(post:).limit(5).order(created_at: :desc)
   end
 
+  def print
+    Post.all.limit(5)
+  end
+
   private
 
   def update_user_post_count
