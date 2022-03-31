@@ -20,7 +20,7 @@ class Post < ApplicationRecord
   end
 
   def info(id)
-    Post.find_by(id: id)
+    Post.find_by(id:)
   end
 
   private

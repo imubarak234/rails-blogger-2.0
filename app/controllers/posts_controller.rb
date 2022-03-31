@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.new.print
     @users = User.new.info(params[:user_id])
-    #@post_comments
+    # @post_comments
   end
 
   def comments(id)
@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   def comments_all(id)
     Post.new.recent_comments_all(id)
   end
-
 
   helper_method :comments, :comments_all
 

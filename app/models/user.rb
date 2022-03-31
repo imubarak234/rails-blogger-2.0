@@ -12,7 +12,7 @@ class User < ApplicationRecord
   end
 
   def info(id)
-    User.find_by(id: id)
+    User.find_by(id:)
   end
 
   def print

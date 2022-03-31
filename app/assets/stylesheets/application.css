@@ -14,11 +14,11 @@
  *= require_self
  */
 
- .borders {
+.borders {
   border: 2px solid black;
   padding: 1em;
   width: 80%;
- }
+}
 
 .user_display {
   border: 2px solid black;
