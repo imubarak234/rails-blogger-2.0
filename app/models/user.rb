@@ -7,5 +7,13 @@ class User < ApplicationRecord
     Post.where(author: user).limit(3).order(created_at: :desc)
   end
 
+  def lists
+    puts self.posts_counter
+  end
+
+  def print
+    User.all.limit(5)
+  end
+
   attr_accessor :posts_counter
 end
