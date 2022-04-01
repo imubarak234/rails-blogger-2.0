@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.new.print
-    @users = User.new.info(params[:user_id])
-    # @post_comments
+    @posts = Post.all
+    @users = User.find_by(id: params[:user_id])
   end
 
   def comments(id)
@@ -16,7 +15,7 @@ class PostsController < ApplicationController
   helper_method :comments, :comments_all
 
   def show
-    @post_show = Post.new.info(params[:id])
-    @user_show = User.new.info(params[:user_id])
+    @post_show = Post.find_by(id: params[:id])
+    @user_show = User.find_by(id: params[:user_id])
   end
 end
