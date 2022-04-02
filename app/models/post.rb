@@ -29,7 +29,7 @@ class Post < ApplicationRecord
   end
 
   def increment_like
-    self.update(likes_counter: var + 1)
+    update(likes_counter: var + 1)
   end
 
   private

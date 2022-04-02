@@ -33,12 +33,11 @@ class PostsController < ApplicationController
     post_create.update(author_id: current_user_id)
     respond_to do |format|
       format.html do
-
         if post_create.save
-          flash[:success] = "Post created successfully"
+          flash[:success] = 'Post created successfully'
           redirect_to user_posts_url
         else
-          flash.now[:error] = "Error: Post could not be created"
+          flash.now[:error] = 'Error: Post could not be created'
 
           render :new, locals: { posts: @posts_new }
         end
