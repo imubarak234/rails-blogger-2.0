@@ -23,6 +23,15 @@ class Post < ApplicationRecord
     Post.find_by(id: ids)
   end
 
+  def update_id(ids, idx)
+    var = Post.find_by(id: ids)
+    var.update(id: idx)
+  end
+
+  def increment_like
+    self.update(likes_counter: var + 1)
+  end
+
   private
 
   def update_user_post_count

@@ -21,13 +21,15 @@
       </div>
   </div>
 
-  <% @posts.each_with_index do |n, idx| %>
+  <% @posts.each do |n| %>
     <div class="borders" onclick="location.href='posts/<%=n.id%>'">
-      <h3>Post #<%=idx + 1%></h3>
-      <h3>Title <%=n.title%></h3>
+      <h3>Post #<%=n.id%></h3>
+      <h3>Title: <%=n.title%></h3>
+      <h3>Author ID: <%=n.author_id%></h3>
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
     </div>
+    <button class="btn" onclick="<%n.likes_counter = 1%>">like</button>
     
     <div class="borders">
       <% comments(n.id).each do |n| %>

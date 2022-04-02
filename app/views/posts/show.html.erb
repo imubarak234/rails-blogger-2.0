@@ -17,6 +17,7 @@
       <h3>Title: <%=@post_show.title%></h3>
       <p><%=@post_show.text%></p>
       <p>Comments: <%=@post_show.comments_counter%>, Likes: <%=@post_show.likes_counter%></p>
+      <button class="btn" onclick="location.href='<%=@post_show.id%>/comments/new'">Comment</button>
     </div>
     
     <div class="borders">
