@@ -23,12 +23,12 @@
   <div class="borders">
     <h3>Bio</h3>
 
-    <p><%= @user_show.Bio%></p>
+    <p><%= @user_show.bio%></p>
   </div>
 
   <% @user_recent.each_with_index do |n, idx| %>
     <div class="borders">
-      <h3>Post #<%=idx%></h3>
+      <h3>Post #<%=idx + 1%></h3>
       <h3><%=n.title%></h3>
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
