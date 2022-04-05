@@ -18,6 +18,4 @@ class User < ApplicationRecord
   def print
     User.all.limit(5)
   end
-
-  attr_accessor :posts_counter
 end

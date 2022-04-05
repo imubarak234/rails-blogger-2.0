@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @users = User.find_by(id: params[:user_id])
+    puts @posts
   end
 
   def comments(id)
