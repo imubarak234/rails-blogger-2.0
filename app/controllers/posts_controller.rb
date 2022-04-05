@@ -13,7 +13,13 @@ class PostsController < ApplicationController
     Post.new.recent_comments_all(id)
   end
 
-  helper_method :comments, :comments_all
+  def increser
+    #Post.find_by(id: ids).increment!(:likes_counter)
+    puts "its working"
+  end
+
+
+  helper_method :comments, :comments_all, :increser
 
   def show
     @post_show = Post.find_by(id: params[:id])

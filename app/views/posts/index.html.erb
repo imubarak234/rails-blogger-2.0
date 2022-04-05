@@ -29,7 +29,8 @@
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
     </div>
-    <button class="btn" onclick="() => <%n.increment_like%>">like</button>
+    <%= button_to 'Like', user_posts_url,  method: :increser,  class: 'btn' %>
+    
     
     <div class="borders">
       <% comments(n.id).each do |n| %>

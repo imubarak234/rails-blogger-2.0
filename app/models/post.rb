@@ -27,7 +27,7 @@ class Post < ApplicationRecord
   end
 
   def increment_like
-    self.increment!(:likes_counter)
+    #increment!(:likes_counter)
   end
 
   private
