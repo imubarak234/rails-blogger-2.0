@@ -29,7 +29,7 @@
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
     </div>
-    <%= button_to 'Like', user_posts_url,  method: :increser,  class: 'btn' %>
+   
     
     
     <div class="borders">
@@ -45,5 +45,13 @@
   
   
   <button class="btn">Pagination</button>
+
+  <div id="<%= dom_id post %>">
+
+  <%= render partial: 'posts/increase', locals: { posts: posts } %>
+  <%= button_to 'Like!',
+        incease_post_path(posts),
+        method: :patch, data: { turbo_frame: '_top' } %>
+</div>
   </body>
 </html>

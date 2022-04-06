@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  include ActionView::RecordIdentifier
+
   def index
     @posts = Post.all
     @users = User.find_by(id: params[:user_id])
@@ -13,9 +16,18 @@ class PostsController < ApplicationController
     Post.new.recent_comments_all(id)
   end
 
-  def increser
-    #Post.find_by(id: ids).increment!(:likes_counter)
-    puts "its working"
+  def increase
+    @post = Post.find_by(id: params[:user_id])
+    @post..increment!(:likes_counter)
+    respond_to do |format|
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.replace(
+          "#{dom_id(@post)}_likes",
+          partial: 'posts/likes',
+          locals: { post: @post }
+        )
+      end
+    end
   end
 
 
