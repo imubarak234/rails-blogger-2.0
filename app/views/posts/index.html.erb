@@ -46,12 +46,5 @@
   
   <button class="btn">Pagination</button>
 
-  <div id="<%= dom_id post %>">
-
-  <%= render partial: 'posts/increase', locals: { posts: posts } %>
-  <%= button_to 'Like!',
-        incease_post_path(posts),
-        method: :patch, data: { turbo_frame: '_top' } %>
-</div>
   </body>
 </html>

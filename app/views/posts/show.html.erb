@@ -19,6 +19,10 @@
       <p>Comments: <%=@post_show.comments_counter%>, Likes: <%=@post_show.likes_counter%></p>
       <button class="btn" onclick="location.href='<%=@post_show.id%>/comments/new'">Comment</button>
     </div>
+
+    <form>
+      
+    </form>
     
     <div class="borders">
       <% comments_all(@post_show.id).each do |n| %>
