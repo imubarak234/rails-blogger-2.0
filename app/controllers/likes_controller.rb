@@ -1,13 +1,10 @@
 class LikesController < ApplicationController
-
   def create
     @like = current_user.likes.new(like_params)
     puts @like
-    if !@like.save
-      flash[:notice] = @like.errors.full_messages.to_sentence
-    end
-    #post = Post.find_by(id: params[:post_id])
-    
+    flash[:notice] = @like.errors.full_messages.to_sentence unless @like.save
+    # post = Post.find_by(id: params[:post_id])
+
     redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts/#{@like.post.id}"
   end
 
@@ -18,10 +15,9 @@ class LikesController < ApplicationController
     redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts/#{post.id}"
   end
 
-  private 
+  private
 
   def like_params
     params.require(:like).permit(:post_id)
   end
-
 end

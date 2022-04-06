@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   include ActionView::RecordIdentifier
 
   def index
