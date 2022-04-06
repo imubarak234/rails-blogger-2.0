@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :likes, only: [:create, :destory]
+  resources :likes, only: [:create, :destroy]
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

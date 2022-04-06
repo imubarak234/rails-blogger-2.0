@@ -16,22 +16,7 @@ class PostsController < ApplicationController
     Post.new.recent_comments_all(id)
   end
 
-  def increase
-    @post = Post.find_by(id: params[:user_id])
-    @post..increment!(:likes_counter)
-    respond_to do |format|
-      format.turbo_stream do
-        render turbo_stream: turbo_stream.replace(
-          "#{dom_id(@post)}_likes",
-          partial: 'posts/likes',
-          locals: { post: @post }
-        )
-      end
-    end
-  end
-
-
-  helper_method :comments, :comments_all, :increser
+  helper_method :comments, :comments_all
 
   def show
     @post_show = Post.find_by(id: params[:id])
@@ -54,7 +39,7 @@ class PostsController < ApplicationController
       format.html do
         if post_create.save
           flash[:success] = 'Post created successfully'
-          redirect_to user_posts_url
+          redirect_to user_post_url
         else
           flash.now[:error] = 'Error: Post could not be created'
 
