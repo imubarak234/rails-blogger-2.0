@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  include ActionView::RecordIdentifier
+
   def index
     @posts = Post.all
     @users = User.find_by(id: params[:user_id])
@@ -13,13 +15,7 @@ class PostsController < ApplicationController
     Post.new.recent_comments_all(id)
   end
 
-  def increser
-    #Post.find_by(id: ids).increment!(:likes_counter)
-    puts "its working"
-  end
-
-
-  helper_method :comments, :comments_all, :increser
+  helper_method :comments, :comments_all
 
   def show
     @post_show = Post.find_by(id: params[:id])

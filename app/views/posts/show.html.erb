@@ -12,13 +12,30 @@
 
   <body>
     <%= yield %>
+    <p id="notice"><%= notice %></p>
     <div class="borders">
       <h3>Post #<%=@post_show.id%> by <%=@user_show.name%> </h3>
       <h3>Title: <%=@post_show.title%></h3>
       <p><%=@post_show.text%></p>
-      <p>Comments: <%=@post_show.comments_counter%>, Likes: <%=@post_show.likes_counter%></p>
+      <p>Comments: <%=@post_show.comments_counter%>, Likes: <%=@post_show.likes.count%></p>
       <button class="btn" onclick="location.href='<%=@post_show.id%>/comments/new'">Comment</button>
     </div>
+
+    
+    <% like = current_user.likes.find_by(post: @post_show) %>
+    <% if like.nil? %>
+      <form action="/likes" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="like[post_id]" value="<%= @post_show.id %>">
+        <input type="submit" value="Like" class="btn">
+      </form>
+    <%else%>
+        <form action="/likes/<%=like.id%>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="UnLike" class="btn">
+      </form>
+    <% end %>
     
     <div class="borders">
       <% comments_all(@post_show.id).each do |n| %>
