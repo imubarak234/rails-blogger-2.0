@@ -38,7 +38,7 @@ class PostsController < ApplicationController
       format.html do
         if post_create.save
           flash[:success] = 'Post created successfully'
-          redirect_to user_post_url
+          redirect_to user_posts_url
         else
           flash.now[:error] = 'Error: Post could not be created'
 
