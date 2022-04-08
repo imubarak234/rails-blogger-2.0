@@ -3,7 +3,6 @@ class LikesController < ApplicationController
     @like = current_user.likes.new(like_params)
     puts @like
     flash[:notice] = @like.errors.full_messages.to_sentence unless @like.save
-    # post = Post.find_by(id: params[:post_id])
 
     redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts/#{@like.post.id}"
   end
