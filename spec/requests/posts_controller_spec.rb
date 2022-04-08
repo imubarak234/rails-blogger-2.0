@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Users Controller', type: :request do
+RSpec.describe 'Post Controller', type: :request do
   context 'Tests for posts#index' do
-    before(:example) { get '/users/:id/posts' }
+    before(:example) { get '/users/1/posts' }
 
     it 'testing correct template rendering' do
       expect(response).to render_template('index')
@@ -18,7 +18,7 @@ RSpec.describe 'Users Controller', type: :request do
   end
 
   context 'Tests for posts#show' do
-    before(:example) { get '/users/:id/posts/:id' }
+    before(:example) { get '/users/1/posts/1' }
 
     it 'testing correct template rendering' do
       expect(response).to render_template('show')

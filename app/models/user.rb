@@ -13,12 +13,5 @@ class User < ApplicationRecord
   def recent_all(user)
     Post.where(author_id: user).order(created_at: :desc)
   end
-
-  def info(ids)
-    User.find_by(id: ids)
-  end
-
-  def print
-    User.all.limit(5)
-  end
+  
 end

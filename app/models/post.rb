@@ -17,23 +17,6 @@ class Post < ApplicationRecord
     Comment.where(post_id: post).order(created_at: :desc)
   end
 
-  def print
-    Post.all.limit(5)
-  end
-
-  def info(ids)
-    Post.find_by(id: ids)
-  end
-
-  def update_id(ids, idx)
-    var = Post.find_by(id: ids)
-    var.update(id: idx)
-  end
-
-  def increment_like
-    # increment!(:likes_counter)
-  end
-
   private
 
   def update_user_post_count

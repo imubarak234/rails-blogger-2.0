@@ -4,7 +4,9 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @users = User.find_by(id: params[:user_id])
-    puts @posts
+    if @users == nil
+      @users = User.new
+    end
   end
 
   def comments(id)
@@ -20,6 +22,15 @@ class PostsController < ApplicationController
   def show
     @post_show = Post.find_by(id: params[:id])
     @user_show = User.find_by(id: params[:user_id])
+
+    if @post_show == nil
+      @post_show = Post.new
+    end
+
+    if @user_show == nil
+      @user_show = User.new
+    end
+
   end
 
   def new
