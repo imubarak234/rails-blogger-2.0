@@ -5,7 +5,7 @@ class LikesController < ApplicationController
     flash[:notice] = @like.errors.full_messages.to_sentence unless @like.save
 
     flash[:notice] = 'You have successfully liked this post.'
-    redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts/#{@like.post.id}"
+    redirect_to user_post_path(current_user, post)
   end
 
   def destroy
