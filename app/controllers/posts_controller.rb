@@ -2,22 +2,21 @@ class PostsController < ApplicationController
   include ActionView::RecordIdentifier
 
   def index
-    @posts = Post.all
     @users = User.find_by(id: params[:user_id])
     if @users == nil
       @users = User.new
     end
+    @posts = @users.posts
+
+    #@posts = Post.where(author_id: @users).includes(:comments).order(created_at: :desc)
   end
 
-  def comments(id)
-    Post.new.recent_comments(id)
-  end
 
   def comments_all(id)
     Post.new.recent_comments_all(id)
   end
 
-  helper_method :comments, :comments_all
+  helper_method :comments_all
 
   def show
     @post_show = Post.find_by(id: params[:id])
