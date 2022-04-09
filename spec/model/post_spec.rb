@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe User, type: :model do
   first_user = User.new
   subject { Post.create(author: first_user, title: 'Hello', text: 'This is my first post') }
@@ -18,12 +17,12 @@ RSpec.describe User, type: :model do
   it 'comment counter should be integer' do
     subject.comments_counter = 2.2
     expect(subject).to_not be_valid
-  end 
+  end
 
   it 'likes counter should be integer' do
     subject.likes_counter = 2.2
     expect(subject).to_not be_valid
-  end 
+  end
 
   it 'comments count should be greater than or equals to zero' do
     subject.comments_counter = -1
@@ -40,12 +39,12 @@ RSpec.describe User, type: :model do
 
     first_post = Post.create(author: fifth_user, title: 'Hello', text: 'This is my first post')
 
-    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!' )
-    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!' )
-    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!' )
-    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!' )
-    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!' )
-    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!' )
+    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!')
+    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!')
+    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!')
+    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!')
+    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!')
+    Comment.create(post: first_post, author: fifth_user, text: 'Hi Tom!')
 
     it 'test for the comment method that list the most recent 5 comments' do
       comments_all = Post.new.recent_comments(first_post)
@@ -63,5 +62,4 @@ RSpec.describe User, type: :model do
       expect(fifth_user.posts_counter).to eq 1
     end
   end
-
 end

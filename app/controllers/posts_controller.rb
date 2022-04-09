@@ -3,14 +3,11 @@ class PostsController < ApplicationController
 
   def index
     @users = User.find_by(id: params[:user_id])
-    if @users == nil
-      @users = User.new
-    end
+    @users = User.new if @users.nil?
     @posts = @users.posts
 
-    #@posts = Post.where(author_id: @users).includes(:comments).order(created_at: :desc)
+    # @posts = Post.where(author_id: @users).includes(:comments).order(created_at: :desc)
   end
-
 
   def comments_all(id)
     Post.new.recent_comments_all(id)
@@ -22,14 +19,9 @@ class PostsController < ApplicationController
     @post_show = Post.find_by(id: params[:id])
     @user_show = User.find_by(id: params[:user_id])
 
-    if @post_show == nil
-      @post_show = Post.new
-    end
+    @post_show = Post.new if @post_show.nil?
 
-    if @user_show == nil
-      @user_show = User.new
-    end
-
+    @user_show = User.new if @user_show.nil?
   end
 
   def new

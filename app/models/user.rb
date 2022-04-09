@@ -13,5 +13,4 @@ class User < ApplicationRecord
   def recent_all(user)
     Post.where(author_id: user).order(created_at: :desc)
   end
-  
 end
