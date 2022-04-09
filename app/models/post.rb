@@ -3,6 +3,10 @@ class Post < ApplicationRecord
   has_many :likes, foreign_key: 'post_id'
   has_many :comments, foreign_key: 'post_id'
 
+  validates :title, presence: true, length: { maximum: 250 }
+  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   after_save :update_user_post_count
 
   def recent_comments(post)
@@ -11,23 +15,6 @@ class Post < ApplicationRecord
 
   def recent_comments_all(post)
     Comment.where(post_id: post).order(created_at: :desc)
-  end
-
-  def print
-    Post.all.limit(5)
-  end
-
-  def info(ids)
-    Post.find_by(id: ids)
-  end
-
-  def update_id(ids, idx)
-    var = Post.find_by(id: ids)
-    var.update(id: idx)
-  end
-
-  def increment_like
-    # increment!(:likes_counter)
   end
 
   private

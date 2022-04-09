@@ -21,7 +21,7 @@
       </div>
   </div>
 
-  <% @posts.each do |n| %>
+  <% @posts.includes(:comments).each do |n| %>
     <div class="borders" onclick="location.href='posts/<%=n.id%>'">
       <h3>Post #<%=n.id%></h3>
       <h3>Title: <%=n.title%></h3>
@@ -33,7 +33,7 @@
     
     
     <div class="borders">
-      <% comments(n.id).each do |n| %>
+      <% n.comments.each do |n| %>
         <div class="section1">
           <h4><%=@users.name%>:</h4>
           <h4><%=n.text%></h4>

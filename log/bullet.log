@@ -1,0 +1,140 @@
+2022-04-09 01:41:42[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 01:42:11[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 01:42:57[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 01:44:11[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 01:44:38[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 01:46:49[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 01:46:53[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 01:49:10[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:09:00[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:10:22[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:11:26[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:11:45[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:12:01[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:12:26[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:12:42[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:12:46[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:13:50[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:16:04[WARN] user: m_b030
+GET /users/1/posts
+AVOID eager loading detected
+  Post => [:comments]
+  Remove from your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:18:29[WARN] user: m_b030
+GET /users/1/posts
+USE eager loading detected
+  Post => [:comments]
+  Add to your query: .includes([:comments])
+Call stack
+
+2022-04-09 02:20:01[WARN] user: m_b030
+GET /users/1/posts
+USE eager loading detected
+  Post => [:comments]
+  Add to your query: .includes([:comments])
+Call stack
+
