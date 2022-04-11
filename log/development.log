@@ -21676,3 +21676,28 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 57ms (Views: 36.2ms | ActiveRecord: 7.4ms | Allocations: 43415)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-10 15:16:01 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 89.4ms | Allocations: 21257)
+  Rendered layout layouts/application.html.erb (Duration: 97.2ms | Allocations: 22888)
+Completed 200 OK in 109ms (Views: 102.1ms | ActiveRecord: 8.9ms | Allocations: 27387)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-04-10 15:16:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1 ORDER BY "posts"."created_at" DESC LIMIT $2[0m  [["author_id", 1], ["LIMIT", 3]]
+  ↳ app/views/users/show.html.erb:30:in `each_with_index'
+  Rendered users/show.html.erb within layouts/application (Duration: 37.0ms | Allocations: 5675)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 7301)
+Completed 200 OK in 69ms (Views: 39.0ms | ActiveRecord: 1.6ms | Allocations: 12823)
+
+
