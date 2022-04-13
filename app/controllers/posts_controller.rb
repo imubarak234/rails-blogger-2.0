@@ -59,7 +59,6 @@ class PostsController < ApplicationController
   end
 end
 
-
 # def destroy
 #   @like_destroy = current_user.likes.find(params[:id])
 #   post = @like_destroy.post

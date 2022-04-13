@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   def index; end
 
   def new
-    #@like = current_user.likes.new(like_params)
+    # @like = current_user.likes.new(like_params)
     @comment_new = current_user.comments.new(post_id: params[:post_id])
     respond_to do |format|
       format.html { render :new, locals: { comment_new: @comment_new } }
@@ -38,5 +38,4 @@ class CommentsController < ApplicationController
     flash[:notice] = 'You have successfully delete this comment.'
     redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts/#{params[:post_id]}"
   end
-
 end
