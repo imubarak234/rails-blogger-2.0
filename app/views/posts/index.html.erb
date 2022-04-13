@@ -18,6 +18,7 @@
       <div class='user_display'>
         <h2><%=@users.name%></h2>
         <p>Number of posts: <%= @users.posts_counter%></p>
+        <button class="btn" onclick="location.href='/users/<%=current_user.id%>/posts/new'">Create Post</button>
       </div>
   </div>
 

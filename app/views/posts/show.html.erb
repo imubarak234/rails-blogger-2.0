@@ -23,6 +23,7 @@
 
     <% if current_user != nil%>
       <% like = current_user.likes.find_by(post: @post_show) %>
+      <%post = current_user.posts.find(@post_show.id)%>
       <% if like.nil? %>
         <form action="/likes" method="post">
           <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -36,13 +37,25 @@
           <input type="submit" value="UnLike" class="btn">
         </form>
       <% end %>
+      <form action="/users/<%=current_user.id%>/posts/<%=@post_show.id%>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete Post" class="btn">
+      </form>
     <%end%>
+
+    
     
     <div class="borders">
       <% comments_all(@post_show.id).each do |n| %>
         <div class="section1">
           <h4><%=@user_show.name%>:</h4>
           <h4><%=n.text%></h4>
+          <form action="/users/<%=current_user.id%>/posts/<%=@post_show.id%>/comments/<%=n.id%>" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete Comment" class="btn">
+          </form>
         </div>
       <% end %>
     </div>

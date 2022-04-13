@@ -49,4 +49,19 @@ class PostsController < ApplicationController
       end
     end
   end
+
+  def destroy
+    @post = current_user.posts.find(params[:id])
+    @post.destroy
+    flash[:notice] = 'You have successfully delete this post.'
+    redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts"
+  end
 end
+
+
+# def destroy
+#   @like_destroy = current_user.likes.find(params[:id])
+#   post = @like_destroy.post
+#   @like_destroy.destroy
+#   redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts/#{post.id}"
+# end
