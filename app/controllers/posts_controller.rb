@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   include ActionView::RecordIdentifier
 
   def index
     @users = User.find_by(id: params[:user_id])
     @users = User.new if @users.nil?
-    @posts = @users.posts
+    @posts = Post.all
 
     # @posts = Post.where(author_id: @users).includes(:comments).order(created_at: :desc)
   end
@@ -25,7 +26,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @posts_new = Post.new
+    @posts_new = current_user.posts.new
     respond_to do |format|
       format.html { render :new, locals: { posts: @posts_new } }
     end

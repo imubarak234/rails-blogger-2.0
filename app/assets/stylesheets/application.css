@@ -38,6 +38,11 @@
   margin: 2em 0;
 }
 
+.section2 {
+  border: 2px solid black;
+  margin: 2em 0;
+}
+
 .btn {
   padding: 1.5em;
   font-size: 1em;

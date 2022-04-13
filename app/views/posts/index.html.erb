@@ -17,6 +17,7 @@
       <div class='profile'></div>
       <div class='user_display'>
         <h2><%=@users.name%></h2>
+        <h4>User: <%=@users.id%></h4>
         <p>Number of posts: <%= @users.posts_counter%></p>
         <button class="btn" onclick="location.href='/users/<%=current_user.id%>/posts/new'">Create Post</button>
       </div>
@@ -35,10 +36,10 @@
     
     <div class="borders">
       <% n.comments.each do |n| %>
-        <div class="section1">
-          <h4><%=@users.name%>:</h4>
-          <h4><%=n.text%></h4>
-        </div>
+        <div class="section2">
+          <h4><%=@users.name%>: <%=n.text%></h4>
+          <h3>Comment Author: User <%=n.author_id%></h3>
+        </div> 
       <% end %>
     </div>
   

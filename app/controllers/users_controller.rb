@@ -8,8 +8,6 @@ class UsersController < ApplicationController
     @user_recent = User.new.recent(params[:id])
     if @user_show.nil?
       @user_show = User.new
-    else
-      cookies[:user_id] = @user_show.id
     end
   end
 end
