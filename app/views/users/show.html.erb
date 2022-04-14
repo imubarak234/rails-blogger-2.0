@@ -16,6 +16,7 @@
     <div class='profile'></div>
     <div class='user_display'>
       <h2><%=@user_show.name%></h2>
+      <h4>User: <%=@user_show.id%></h4>
       <p>Number of posts: <%= @user_show.posts_counter%></p>
     </div>
     <button class="btn" onclick="location.href='<%=@user_show.id%>/posts/new'">Create Post</button>
@@ -31,6 +32,7 @@
     <div class="borders">
       <h3>Post #<%=idx + 1%></h3>
       <h3><%=n.title%></h3>
+      <h4>Author ID: <%=n.author_id%></h4>
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
     </div>

@@ -24,6 +24,8 @@
     <% else %>
       <a href='/users/sign_in'>Sign in</a>
     <% end %>
+
+    <h2>User: <%=current_user.id%>  SIGNED IN</h2>
     <%= yield %>
   </body>
 </html>

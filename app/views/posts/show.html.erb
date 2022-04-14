@@ -15,6 +15,7 @@
     <p id="notice"><%= notice %></p>
     <div class="borders">
       <h3>Post #<%=@post_show.id%> by <%=@user_show.name%> </h3>
+      <h4>Author ID: <%=@user_show.id%></h4>
       <h3>Title: <%=@post_show.title%></h3>
       <p><%=@post_show.text%></p>
       <p>Comments: <%=@post_show.comments_counter%>, Likes: <%=@post_show.likes.count%></p>
@@ -36,13 +37,25 @@
           <input type="submit" value="UnLike" class="btn">
         </form>
       <% end %>
+      <form action="/users/<%=current_user.id%>/posts/<%=@post_show.id%>" method="post">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete Post" class="btn">
+      </form>
     <%end%>
+
+    
     
     <div class="borders">
       <% comments_all(@post_show.id).each do |n| %>
         <div class="section1">
           <h4><%=@user_show.name%>:</h4>
           <h4><%=n.text%></h4>
+          <form action="/users/<%=current_user.id%>/posts/<%=@post_show.id%>/comments/<%=n.id%>" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete Comment" class="btn">
+          </form>
         </div>
       <% end %>
     </div>
