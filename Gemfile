@@ -49,6 +49,8 @@ gem 'rails-controller-testing'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+gem 'ffi', '~> 1.15', '>= 1.15.5'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
