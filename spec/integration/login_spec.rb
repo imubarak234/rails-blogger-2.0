@@ -39,16 +39,18 @@ RSpec.describe 'Login Page', type: :feature do
     end
 
     it "Test clicking the Log-in with True input" do
+      user = User.create(name: "tester", photo: "photo.com", bio: "All days", email: "example@email.com",
+        password: "123456789")
         visit '/users/sign_in'
         within("#session") do
-          fill_in 'Email', with: 'm.bthedon@yahoo.com'
-          expect(page).to have_selector("input[value='m.bthedon@yahoo.com']")
+          fill_in 'Email', with: 'example@email.com'
+          expect(page).to have_selector("input[value='example@email.com']")
           fill_in 'Password', with: '123456789'
           expect(page).to have_selector("input[value='123456789']")
         end
         click_button 'Log in'
-        visit '/users/'
-        expect(page).to have_current_path('/users')
+        #visit '/users/'
+        expect(page).to have_current_path('/')
     end
 
   end

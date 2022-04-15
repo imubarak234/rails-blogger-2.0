@@ -16,11 +16,12 @@
 
     <% @user.each do |n| %>
       <div class='section1'>
-        <div class='profile'></div>
+        <div class='profile'><p>Picture</p></div>
         <div class='user_display' onclick="location.href='users/<%=n.id%>'">
-          <h2><%= n.name %></h2>
+          <h2>Username: <%= n.name %></h2>
           <h4>ID: <%= n.id %></h4>
           <p>Number of posts: <%= n.posts_counter%></p>
+          <a class="btn" href="http://127.0.0.1:3000/users/<%=n.id%>">Users Page</a>
         </div>
       </div>
     <% end %>
