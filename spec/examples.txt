@@ -1,12 +1,13 @@
 example_id                                       | status | run_time        |
 ------------------------------------------------ | ------ | --------------- |
-./spec/integration/login_spec.rb[1:1:1]          | passed | 0.02261 seconds |
-./spec/integration/login_spec.rb[1:1:2]          | passed | 0.02142 seconds |
-./spec/integration/login_spec.rb[1:1:3]          | passed | 0.02136 seconds |
-./spec/integration/login_spec.rb[1:1:4]          | passed | 0.04971 seconds |
-./spec/integration/login_spec.rb[1:1:5]          | passed | 0.07268 seconds |
-./spec/integration/login_spec.rb[1:1:6]          | passed | 0.54634 seconds |
-./spec/integration/user_index_spec.rb[1:1:1]     | passed | 0.07677 seconds |
+./spec/integration/login_spec.rb[1:1:1]          | passed | 0.01982 seconds |
+./spec/integration/login_spec.rb[1:1:2]          | passed | 0.02463 seconds |
+./spec/integration/login_spec.rb[1:1:3]          | passed | 0.16861 seconds |
+./spec/integration/login_spec.rb[1:1:4]          | passed | 0.05177 seconds |
+./spec/integration/login_spec.rb[1:1:5]          | passed | 0.15004 seconds |
+./spec/integration/login_spec.rb[1:1:6]          | passed | 0.09841 seconds |
+./spec/integration/user_index_spec.rb[1:1:1]     | passed | 0.4757 seconds  |
+./spec/integration/user_show_spec.rb[1:1:1]      | passed | 0.21997 seconds |
 ./spec/model/comment_spec.rb[1:1]                | passed | 0.01178 seconds |
 ./spec/model/like_spec.rb[1:1]                   | passed | 0.02914 seconds |
 ./spec/model/like_spec.rb[1:2]                   | passed | 0.01144 seconds |

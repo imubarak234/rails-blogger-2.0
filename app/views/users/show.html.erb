@@ -13,7 +13,7 @@
   <body>
     <%= yield %>
   <div class='section1'>
-    <div class='profile'></div>
+    <div class='profile'><h4>Picture</h4></div>
     <div class='user_display'>
       <h2><%=@user_show.name%></h2>
       <h4>User: <%=@user_show.id%></h4>
@@ -35,9 +35,10 @@
       <h4>Author ID: <%=n.author_id%></h4>
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
+      <a class="btn" href="http://127.0.0.1:3000/users/<%=@user_show.id%>/posts/<%=n.id%>">Post Page</a>
     </div>
   <% end %>
 
-  <button onclick="location.href='<%=@user_show.id%>/posts'" class="btn">See all posts</button>
+  <a class="btn" href="http://127.0.0.1:3000/users/<%=@user_show.id%>/posts">See all posts</a>
   </body>
 </html>
