@@ -1,9 +1,24 @@
 module Api 
   module V1
-    class PostsController < ApiController
+    class PostsController < ApplicationController
       def index
-        user = Post.all
-        render json: user
+        hmac_secret = 'my$ecretK3y'
+
+        token = params.require(:token)
+
+        user = User.all
+        #render json: user
+
+        params.require(:token)
+
+        decodes = JWT.decode token, hmac_secret, true, { algorithm: 'HS256' }
+
+        ids = decodes[0]["user_id"]
+
+        current_user = User.find(ids)
+        post = current_user.posts
+        render json: post
+
       end
     end
   end

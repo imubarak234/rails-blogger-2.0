@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  post 'user_token' => 'user_token#create'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
@@ -7,12 +6,10 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       post 'authenticate', to: 'authentication#create'
-      resources :users do
-        resources :posts do
-          resources :comments 
-        end
+      resources :users
+      resources :posts do
+        resources :comments 
       end
-
     end
   end
 
