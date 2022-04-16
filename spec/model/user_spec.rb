@@ -21,7 +21,8 @@
 #   end
 
 #   context 'Testing methods in the user model' do
-#     first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
+#     first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+# bio: 'Teacher from Mexico.')
 
 #     Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
 #     Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
