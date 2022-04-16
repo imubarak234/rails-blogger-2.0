@@ -1,14 +1,28 @@
 <h2>Log in</h2>
+<p><%=@messages%></p>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name, html: { class: "needs-validation", novalidate: true, id: "session"}, url: session_path(resource_name)) do |f| %>
+
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class: "form-label", for: "validationCustomUsername" %><br />
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",id: "validationCustomUsername", class: "form-control", 
+      required: true, placeholder: "Email"
+      %>
+      <div class="invalid-feedback">
+          Please Enter an Email Address.
+      </div>
+    </div> 
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.label :password, class: "form-label", for: "validationCustom03" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "validationCustom03",
+    required: true, placeholder: "Password" %>
+    <div class="invalid-feedback">
+      Please provide Password.
+    </div>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -22,5 +36,27 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+  </script>
 
 <%= render "devise/shared/links" %>

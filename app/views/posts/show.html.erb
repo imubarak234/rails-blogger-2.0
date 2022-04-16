@@ -51,11 +51,13 @@
         <div class="section1">
           <h4><%=@user_show.name%>:</h4>
           <h4><%=n.text%></h4>
-          <form action="/users/<%=current_user.id%>/posts/<%=@post_show.id%>/comments/<%=n.id%>" method="post">
-            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-            <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" value="Delete Comment" class="btn">
-          </form>
+          <%if current_user%>
+            <form action="/users/<%=current_user.id%>/posts/<%=@post_show.id%>/comments/<%=n.id%>" method="post">
+              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="submit" value="Delete Comment" class="btn">
+            </form>
+          <%end%>
         </div>
       <% end %>
     </div>
