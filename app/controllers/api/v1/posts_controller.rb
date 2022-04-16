@@ -1,4 +1,4 @@
-module Api 
+module Api
   module V1
     class PostsController < ApplicationController
       def index
@@ -6,19 +6,15 @@ module Api
 
         token = params.require(:token)
 
-        user = User.all
-        #render json: user
-
         params.require(:token)
 
         decodes = JWT.decode token, hmac_secret, true, { algorithm: 'HS256' }
 
-        ids = decodes[0]["user_id"]
+        ids = decodes[0]['user_id']
 
         current_user = User.find(ids)
         post = current_user.posts
         render json: post
-
       end
     end
   end

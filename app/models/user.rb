@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: 'author_id'
   has_many :comments, foreign_key: 'author_id'
 
-  alias_method :authenticate, :valid_password?
+  alias authenticate valid_password?
 
   validates :name, presence: true
   validates :encrypted_password, presence: true
@@ -23,6 +23,6 @@ class User < ApplicationRecord
   end
 
   def self.form_token_payload(payload)
-    self.find payload["sub"]
+    find payload['sub']
   end
 end

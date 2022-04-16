@@ -35922,3 +35922,484 @@ app/controllers/api/v1/users_controller.rb:17: Can't assign to true
 app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
 app/controllers/api/v1/users_controller.rb:17: Can't assign to true
 app/controllers/api/v1/users_controller.rb:18: syntax error, unexpected '\n', expecting '.' or &. or :: or '['
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:27:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `index'
+Completed 500 Internal Server Error in 33ms (Views: 10.9ms | ActiveRecord: 4.8ms | Allocations: 16419)
+
+
+  
+NameError (undefined local variable or method `hmac_secret' for #<Api::V1::UsersController:0x000000000110a8>
+
+        decoded_token = JWT.decode token, hmac_secret, true, { algorithm: 'HS256' }
+                                          ^^^^^^^^^^^):
+  
+app/controllers/api/v1/users_controller.rb:14:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:27:48 +0100
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `index'
+Completed 500 Internal Server Error in 13ms (Views: 6.2ms | ActiveRecord: 2.8ms | Allocations: 6965)
+
+
+  
+JWT::DecodeError (Invalid segment encoding):
+  
+app/controllers/api/v1/users_controller.rb:16:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:30:06 +0100
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `index'
+Completed 500 Internal Server Error in 12ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 4957)
+
+
+  
+NameError (undefined local variable or method `decode_token' for #<Api::V1::UsersController:0x0000000001a4f0>
+
+        ids = decode_token[0].user_id
+              ^^^^^^^^^^^^
+Did you mean?  decoded_token):
+  
+app/controllers/api/v1/users_controller.rb:18:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:31:58 +0100
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `index'
+Completed 500 Internal Server Error in 15ms (Views: 5.7ms | ActiveRecord: 2.8ms | Allocations: 8095)
+
+
+  
+NoMethodError (undefined method `user_id' for {"user_id"=>1}:Hash
+
+        ids = decodes[0].user_id
+                        ^^^^^^^^):
+  
+app/controllers/api/v1/users_controller.rb:18:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:32:27 +0100
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `index'
+Completed 500 Internal Server Error in 13ms (Views: 5.7ms | ActiveRecord: 2.8ms | Allocations: 6776)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/users_controller.rb:21:in `index'
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:33:27 +0100
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1181)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:35:43 +0100
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1160)
+
+
+Started GET "/api/v1/users" for ::1 at 2022-04-16 18:37:02 +0100
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:20:in `index'
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 2.9ms | Allocations: 7966)
+
+
+Started GET "/api/v1/users/posts" for ::1 at 2022-04-16 18:38:59 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::UsersController):
+  
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+bullet (7.0.1) lib/bullet/rack.rb:15:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/posts" for ::1 at 2022-04-16 18:40:43 +0100
+Processing by Api::V1::PostsController#index as JSON
+  Parameters: {"token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/posts_controller.rb:18:in `index'
+  [1m[36mPost Load (11.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/controllers/api/v1/posts_controller.rb:20:in `index'
+Completed 200 OK in 49ms (Views: 11.9ms | ActiveRecord: 16.2ms | Allocations: 14631)
+
+
+Started GET "/api/v1/posts/1/comments" for ::1 at 2022-04-16 18:43:21 +0100
+Processing by Api::V1::CommentsController#index as JSON
+  Parameters: {"token"=>"[FILTERED]", "post_id"=>"1"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3374)
+
+
+  
+NameError (uninitialized constant Api::V1::CommentsController::Comments
+
+        user = Comments.all
+               ^^^^^^^^):
+  
+app/controllers/api/v1/comments_controller.rb:5:in `index'
+Started GET "/api/v1/posts/1/comments" for ::1 at 2022-04-16 18:43:58 +0100
+Processing by Api::V1::CommentsController#index as JSON
+  Parameters: {"token"=>"[FILTERED]", "post_id"=>"1"}
+  [1m[36mComment Load (2.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 4.6ms | ActiveRecord: 4.3ms | Allocations: 4751)
+
+
+Started GET "/api/v1/posts/1/comments" for ::1 at 2022-04-16 18:46:55 +0100
+Processing by Api::V1::CommentsController#index as JSON
+  Parameters: {"token"=>"[FILTERED]", "post_id"=>"1"}
+Completed 404 Not Found in 9ms (ActiveRecord: 2.0ms | Allocations: 2814)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Post without an ID):
+  
+app/controllers/api/v1/comments_controller.rb:5:in `index'
+Started GET "/api/v1/posts/1/comments" for ::1 at 2022-04-16 18:47:58 +0100
+Processing by Api::V1::CommentsController#index as JSON
+  Parameters: {"token"=>"[FILTERED]", "post_id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 7105)
+
+
+Started GET "/api/v1/posts/1/comments" for ::1 at 2022-04-16 18:48:22 +0100
+Processing by Api::V1::CommentsController#index as JSON
+  Parameters: {"token"=>"[FILTERED]", "post_id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:5:in `index'
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:7:in `index'
+Completed 200 OK in 23ms (Views: 4.4ms | ActiveRecord: 4.8ms | Allocations: 10477)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:00:45 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 5ms (Allocations: 1303)
+
+
+  
+JSON::ParserError (859: unexpected token at '{
+    text: "all for one"
+}'):
+  
+app/controllers/api_controller.rb:8:in `json_payload'
+app/controllers/api/v1/comments_controller.rb:12:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:01:13 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 2ms (Allocations: 544)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..4)):
+  
+app/controllers/api/v1/comments_controller.rb:12:in `select'
+app/controllers/api/v1/comments_controller.rb:12:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:02:45 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 5ms (Allocations: 1217)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..4)):
+  
+app/controllers/api/v1/comments_controller.rb:12:in `select'
+app/controllers/api/v1/comments_controller.rb:12:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:03:49 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 107ms (Views: 0.2ms | ActiveRecord: 6.2ms | Allocations: 8852)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:07:53 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 5.4ms | Allocations: 5812)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:08:50 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3553)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:09:14 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/api/v1/comments_controller.rb:13:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:10:45 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5168)
+
+
+  
+NoMethodError (undefined method `data' for #<Api::V1::CommentsController:0x000000000bcac0>
+
+        comment = Comment.new(data post: @post)
+                              ^^^^):
+  
+app/controllers/api/v1/comments_controller.rb:13:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:11:00 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 5166)
+
+
+  
+NoMethodError (undefined method `data' for #<Api::V1::CommentsController:0x000000000c5350>
+
+        comment = Comment.new(data post: @post)
+                              ^^^^):
+  
+app/controllers/api/v1/comments_controller.rb:13:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:11:16 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:15:in `create'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 5.6ms | Allocations: 11276)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:11:50 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:15:in `create'
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 4.8ms | Allocations: 11004)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:13:27 +0100
+  
+SyntaxError (C:/Users/m_bth/Desktop/stuff/code/Module 5 repos/rails-blogger-2.0/app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+        user = post.users
+        ^~~~
+):
+  
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:13:52 +0100
+  
+SyntaxError (C:/Users/m_bth/Desktop/stuff/code/Module 5 repos/rails-blogger-2.0/app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+        user = post.user
+        ^~~~
+):
+  
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:14:17 +0100
+  
+SyntaxError (C:/Users/m_bth/Desktop/stuff/code/Module 5 repos/rails-blogger-2.0/app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+        current_user = post.user
+        ^~~~~~~~~~~~
+):
+  
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/api/v1/comments_controller.rb:13: syntax error, unexpected local variable or method, expecting ')'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:14:40 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.3ms | Allocations: 10669)
+
+
+  
+NoMethodError (undefined method `user' for #<Post id: 1, author_id: 1, title: "New post form testing", text: "Checking if you are working user_posts_pathuser_po...", created_at: "2022-04-15 22:37:46.420981000 +0000", updated_at: "2022-04-15 22:37:46.420981000 +0000", comments_counter: 2, likes_counter: 0>):
+  
+app/controllers/api/v1/comments_controller.rb:13:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:14:57 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:12:in `create'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 2.8ms | Allocations: 10652)
+
+
+  
+NoMethodError (undefined method `users' for #<Post id: 1, author_id: 1, title: "New post form testing", text: "Checking if you are working user_posts_pathuser_po...", created_at: "2022-04-15 22:37:46.420981000 +0000", updated_at: "2022-04-15 22:37:46.420981000 +0000", comments_counter: 2, likes_counter: 0>):
+  
+app/controllers/api/v1/comments_controller.rb:13:in `create'
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:15:50 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:12:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:13:in `create'
+  [1m[36mCACHE Post Load (0.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mComment Create (15.4ms)[0m  [1m[32mINSERT INTO "comments" ("text", "author_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "all for one"], ["author_id", 1], ["post_id", 1], ["created_at", "2022-04-16 18:15:52.055147"], ["updated_at", "2022-04-16 18:15:52.055147"]]
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mPost Update All (1.2ms)[0m  [1m[33mUPDATE "posts" SET "comments_counter" = COALESCE("comments_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["comments_counter", 1], ["id", 1]]
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+Completed 200 OK in 56ms (Views: 0.5ms | ActiveRecord: 24.9ms | Allocations: 20274)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:16:22 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:12:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("text", "author_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "all for one"], ["author_id", 1], ["post_id", 1], ["created_at", "2022-04-16 18:16:24.811112"], ["updated_at", "2022-04-16 18:16:24.811112"]]
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mPost Update All (0.2ms)[0m  [1m[33mUPDATE "posts" SET "comments_counter" = COALESCE("comments_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["comments_counter", 1], ["id", 1]]
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mPost Update All (0.2ms)[0m  [1m[33mUPDATE "posts" SET "comments_counter" = COALESCE("comments_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["comments_counter", 1], ["id", 1]]
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:19:in `create'
+Completed 200 OK in 36ms (Views: 0.4ms | ActiveRecord: 9.7ms | Allocations: 20082)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:17:06 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:12:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mComment Create (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("text", "author_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "all for one"], ["author_id", 1], ["post_id", 1], ["created_at", "2022-04-16 18:17:08.284495"], ["updated_at", "2022-04-16 18:17:08.284495"]]
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mPost Update All (0.4ms)[0m  [1m[33mUPDATE "posts" SET "comments_counter" = COALESCE("comments_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["comments_counter", 1], ["id", 1]]
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mPost Update All (0.3ms)[0m  [1m[33mUPDATE "posts" SET "comments_counter" = COALESCE("comments_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["comments_counter", 1], ["id", 1]]
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:19:in `create'
+Completed 200 OK in 38ms (Views: 0.4ms | ActiveRecord: 9.6ms | Allocations: 20072)
+
+
+Started POST "/api/v1/posts/1/comments" for ::1 at 2022-04-16 19:17:10 +0100
+Processing by Api::V1::CommentsController#create as JSON
+  Parameters: {"post_id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:12:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/comments_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mComment Create (1.6ms)[0m  [1m[32mINSERT INTO "comments" ("text", "author_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["text", "all for one"], ["author_id", 1], ["post_id", 1], ["created_at", "2022-04-16 18:17:10.227008"], ["updated_at", "2022-04-16 18:17:10.227008"]]
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mPost Update All (0.3ms)[0m  [1m[33mUPDATE "posts" SET "comments_counter" = COALESCE("comments_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["comments_counter", 1], ["id", 1]]
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mPost Update All (0.3ms)[0m  [1m[33mUPDATE "posts" SET "comments_counter" = COALESCE("comments_counter", 0) + $1 WHERE "posts"."id" = $2[0m  [["comments_counter", 1], ["id", 1]]
+  ↳ app/models/comment.rb:10:in `update_post_comments_count'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:19:in `create'
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 6666)
+
+
