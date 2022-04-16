@@ -14,22 +14,25 @@
   <body>
     <%= yield %>
     <div class='section1'>
-      <div class='profile'></div>
+      <div class='profile'><h4>Picture</h4></div>
       <div class='user_display'>
         <h2><%=@users.name%></h2>
         <h4>User: <%=@users.id%></h4>
         <p>Number of posts: <%= @users.posts_counter%></p>
-        <button class="btn" onclick="location.href='/users/<%=current_user.id%>/posts/new'">Create Post</button>
+        <%if current_user%>
+          <button class="btn" onclick="location.href='/users/<%=current_user.id%>/posts/new'">Create Post</button>
+        <%end%>
       </div>
   </div>
 
-  <% @posts.includes(:comments).each do |n| %>
+  <% @posts.includes(:comments).each_with_index do |n, idx| %>
     <div class="borders" onclick="location.href='posts/<%=n.id%>'">
       <h3>Post #<%=n.id%></h3>
       <h3>Title: <%=n.title%></h3>
       <h3>Author ID: <%=n.author_id%></h3>
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
+      <a class="btn" href="http://127.0.0.1:3000/users/<%=@users.id%>/posts/<%=n.id%>">Post Page# <%=idx + 1%></a>
     </div>
    
     

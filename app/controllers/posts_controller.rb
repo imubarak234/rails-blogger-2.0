@@ -6,8 +6,6 @@ class PostsController < ApplicationController
     @users = User.find_by(id: params[:user_id])
     @users = User.new if @users.nil?
     @posts = Post.all
-
-    # @posts = Post.where(author_id: @users).includes(:comments).order(created_at: :desc)
   end
 
   def comments_all(id)
@@ -58,10 +56,3 @@ class PostsController < ApplicationController
     redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts"
   end
 end
-
-# def destroy
-#   @like_destroy = current_user.likes.find(params[:id])
-#   post = @like_destroy.post
-#   @like_destroy.destroy
-#   redirect_to "http://127.0.0.1:3000/users/#{current_user.id}/posts/#{post.id}"
-# end
