@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      post 'authenticate', to: 'authentication#create'
+      resources :users
+      resources :posts do
+        resources :comments 
+      end
+    end
+  end
 
   root "users#index"
 

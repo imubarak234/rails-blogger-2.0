@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
   def index; end
 
   def new
-    # @like = current_user.likes.new(like_params)
     @comment_new = current_user.comments.new(post_id: params[:post_id])
     respond_to do |format|
       format.html { render :new, locals: { comment_new: @comment_new } }
