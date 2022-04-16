@@ -7,9 +7,14 @@ module Api
         params.require(:password)
 
         user = User.find_by(email: params.require(:email))
-        token = AuthenticationTokenService.call(user.id)
 
-        render json: { token: }, status: :created
+        if user
+          tokens = AuthenticationTokenService.call(user.id)
+
+          render json: { token: tokens }, status: :created
+        else
+          render json: { error: 'User does not exist' }
+        end
       end
 
       private
