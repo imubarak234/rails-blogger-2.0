@@ -19,9 +19,9 @@ RSpec.describe 'User Show', type: :feature do
       expect(page).to have_content("See all posts")
 
 
-      first(:link, 'Post Page').click    
+      click_on'Post Page# 1'    
      
-      expect(page).to have_current_path("/users/#{user.id}/posts/#{Post.count}")
+      expect(page).to have_current_path("/users/#{user.id}/posts/10")
 
       visit '/users/1'
 

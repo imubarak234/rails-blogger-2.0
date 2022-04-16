@@ -35,7 +35,7 @@
       <h4>Author ID: <%=n.author_id%></h4>
       <p><%=n.text%></p>
       <p>Comments: <%=n.comments_counter%>, Likes: <%=n.likes_counter%></p>
-      <a class="btn" href="http://127.0.0.1:3000/users/<%=@user_show.id%>/posts/<%=n.id%>">Post Page</a>
+      <a class="btn" href="http://127.0.0.1:3000/users/<%=@user_show.id%>/posts/<%=n.id%>">Post Page# <%=idx + 1%></a>
     </div>
   <% end %>
 
