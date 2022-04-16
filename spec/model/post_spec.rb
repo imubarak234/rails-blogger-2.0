@@ -36,7 +36,7 @@ RSpec.describe User, type: :model do
 
   context 'Testing methods in the post model' do
     fifth_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
-                             bio: 'Teacher from Mexico.')
+bio: 'Teacher from Mexico.')
 
     first_post = Post.create(author: fifth_user, title: 'Hello', text: 'This is my first post')
 
